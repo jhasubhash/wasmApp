@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch --mode=development",
-    "prod": "webpack --mode=production"
+    "prod": "webpack --mode=production",
+    "start": "webpack-dev-server --open",
+    "build": "./build.sh"
   },
   "repository": {
     "type": "git",
@@ -22,9 +24,11 @@
     "@babel/core": "^7.9.6",
     "babel-loader": "^8.1.0",
     "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
     "path": "^0.12.7",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
     "worker-loader": "^2.0.0"
   }
 }

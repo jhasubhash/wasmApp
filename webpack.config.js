@@ -1,5 +1,7 @@
 // webpack.config.js
 const path = require( 'path' );
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     context: __dirname,
     entry: './js/index.js',
@@ -8,9 +10,16 @@ module.exports = {
         filename: 'bundle.js',
         globalObject: "self"
     },
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './web',
+        compress: true,
+        port: 9000
+    },
     node: { 
         fs: "empty"
     },
+    plugins: [new HtmlWebpackPlugin()],
     module: {
         noParse: /web[\/\\]gen[\/\\].*\.js$/,
         rules: [

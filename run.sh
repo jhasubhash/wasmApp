@@ -1,1 +1,1 @@
-bash -c "cd ./web; python -m SimpleHTTPServer 9000"
+bash -c "python -m SimpleHTTPServer 9000"
