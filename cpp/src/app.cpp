@@ -6,6 +6,19 @@
 
 using namespace emscripten;
 
+class WasmObject {
+public:
+  WasmObject(){};
+  void someFunction(){};
+};
+
+EMSCRIPTEN_BINDINGS(ClassBinding) {
+  class_<WasmObject>("WasmObject")
+    .constructor()
+    .function("someFunction", &WasmObject::someFunction)
+    ;
+}
+
 void tryAllocationToWasmFromJS(){
     char* ptr = new char[100*1024*1024]; //100 MB
     std::cout<<ptr<<std::endl;
