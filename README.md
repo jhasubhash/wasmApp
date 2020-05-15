@@ -1,4 +1,4 @@
-To build
-npm run build
-To run
-npm start
+# To build
+> npm run build
+# To run
+> npm start
